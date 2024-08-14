@@ -23,6 +23,7 @@ exports.refreshContent = asyncHandler(async (req, res, next) => {
   });
 });
 
+
 exports.refreshtruck = asyncHandler(async (req, res, next) => {
   io.emit("globalTruck", {
     data: {
@@ -35,6 +36,8 @@ exports.refreshtruck = asyncHandler(async (req, res, next) => {
     data: {},
   });
 });
+
+
 
 exports.refreshCommerce = asyncHandler(async (req, res, next) => {
   await io.emit("globalCommerce", {
