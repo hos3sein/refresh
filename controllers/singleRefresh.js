@@ -23,14 +23,20 @@ exports.singleOrder = asyncHandler(async (req, res, next) => {
         success: true,
         data: {},
       });
-
     });
+    
+    
     exports.singleTransportC = asyncHandler(async (req, res, next) => {
    
       const  userId=req.params.id
 
       console.log(`commercet${userId}`);
       io.emit(`commercet${userId}`,{
+        date:{
+          success:true
+        }
+      })
+       io.emit(`commercet${userId}`,{
         date:{
           success:true
         }
@@ -47,6 +53,13 @@ exports.singleOrder = asyncHandler(async (req, res, next) => {
 
       console.log(req.body);
 
+      io.emit(`chat${requster}`,{data:{
+        success:true
+      }})
+
+      io.emit(`chat${transport}`,{data:{
+        success:true
+      }})
       io.emit(`chat${requster}`,{data:{
         success:true
       }})
@@ -87,6 +100,18 @@ exports.singleOrder = asyncHandler(async (req, res, next) => {
       io.emit(`inquery${transport}`,{data:{
         success:true
       }})
+      io.emit(`inquery${requster}`,{data:{
+        success:true
+      }})
+      
+      io.emit(`inquery${responser}`,{data:{
+        success:true
+      }})
+
+      
+      io.emit(`inquery${transport}`,{data:{
+        success:true
+      }})
        res.status(200).json({
          success: true,
          data: {},
@@ -104,15 +129,25 @@ exports.singleOrder = asyncHandler(async (req, res, next) => {
           success:true
         }
       })
+      io.emit(`commercetr${userId}`,{
+        date:{
+          success:true
+        }
+      })
        res.status(200).json({
          success: true,
          data: {},
        });
      });
+     
      exports.singlelinemaker= asyncHandler(async (req, res, next) => {
    
       const {lineMakerId,driverId}=req.body
           
+      io.emit(`linesingel${lineMakerId}`,{nice:2})
+
+      io.emit(`linesingel${driverId}`,{nice:2})
+      
       io.emit(`linesingel${lineMakerId}`,{nice:2})
 
       io.emit(`linesingel${driverId}`,{nice:2})

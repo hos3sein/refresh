@@ -22,13 +22,11 @@ router.get("/callfavorite",C.refreshFavorite);
 router.get("/callapprove",C.refreshApprove);
 router.get("/refreshnotif",C.refreshNotif);
 
-
 //! its for test single
 router.get("/singlecommerce/:id",C.singleCommerce)
 router.get("/singletransport/:id",C.singleCommerce)
 router.get("/singletruck/:id",C.singleCommerce)
 router.get("/singlelinemaker/:id",C.singleCommerce)
-
 
 
 module.exports = router;
