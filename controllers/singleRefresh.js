@@ -36,11 +36,11 @@ exports.singleOrder = asyncHandler(async (req, res, next) => {
           success:true
         }
       })
-       io.emit(`commercet${userId}`,{
-        date:{
-          success:true
-        }
-      })
+    //   io.emit(`commercet${userId}`,{
+    //     date:{
+    //       success:true
+    //     }
+    //   })
        res.status(200).json({
          success: true,
          data: {},
@@ -100,18 +100,18 @@ exports.singleOrder = asyncHandler(async (req, res, next) => {
       io.emit(`inquery${transport}`,{data:{
         success:true
       }})
-      io.emit(`inquery${requster}`,{data:{
-        success:true
-      }})
+    //   io.emit(`inquery${requster}`,{data:{
+    //     success:true
+    //   }})
       
-      io.emit(`inquery${responser}`,{data:{
-        success:true
-      }})
+    //   io.emit(`inquery${responser}`,{data:{
+    //     success:true
+    //   }})
 
       
-      io.emit(`inquery${transport}`,{data:{
-        success:true
-      }})
+    //   io.emit(`inquery${transport}`,{data:{
+    //     success:true
+    //   }})
        res.status(200).json({
          success: true,
          data: {},
@@ -129,11 +129,11 @@ exports.singleOrder = asyncHandler(async (req, res, next) => {
           success:true
         }
       })
-      io.emit(`commercetr${userId}`,{
-        date:{
-          success:true
-        }
-      })
+    //   io.emit(`commercetr${userId}`,{
+    //     date:{
+    //       success:true
+    //     }
+    //   })
        res.status(200).json({
          success: true,
          data: {},
